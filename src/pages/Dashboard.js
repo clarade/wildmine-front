@@ -1,8 +1,6 @@
 import React from "react";
-
 import { useQuery } from "@apollo/client";
 import { userWithRelations } from "../graphql/UserSession";
-
 import DisplayAttachedProjects from "./components/dashboard/DisplayAttachedProjects";
 import DisplayDashboardTitleIssues from "./components/dashboard/DisplayDashboardTitleIssues";
 import DisplayIssuesValues from "./components/issues/DisplayIssuesValues";
@@ -10,8 +8,6 @@ import Diagram from "./components/dashboard/Diagram";
 
 const Dashboard = ({ actualUser }) => {
   const { loading, error, data } = useQuery(userWithRelations);
-
-  console.log(data);
 
   if (loading)
     return (
@@ -37,37 +33,33 @@ const Dashboard = ({ actualUser }) => {
 
   if (error) return `Error! ${error.message}`;
 
-  console.log(data.userWithRelations.issues_assigned);
-
   return (
     <div className="dashboard-container">
       {actualUser ? (
         <>
           <div className="">
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-              <div className="grid grid-cols-1 col-span-3 m-4">
-                <div className="max-w-sm rounded overflow-hidden shadow-lg bg-secondary_color">
-                  <div className="p-4">
-                    <Diagram />
+            <div className="">
+              <div className="flex flex-col md:flex-row justify-between">
+                <div className="grid rounded p-4 bg-secondary_color grid-cols-1 col-span-3 m-4">
+                  <Diagram />
+                </div>
+                <div className="grid grid-cols-1 col-span-3 m-4">
+                  <p className="font-bold text-xl mb-2 text_color_light font-chaney_title divide-y divide-solid">
+                    Projets auxquels je suis rattaché
+                  </p>
+                  <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
+                    <DisplayAttachedProjects />
                   </div>
+                  {data.userWithRelations.project_assigned.map((project) => {
+                    return (
+                      <div className="grid grid-cols-3 p-4 text-center">
+                        <p>{project.name}</p>
+                        <p>{project.description}</p>
+                        <p>{project.created_at}</p>
+                      </div>
+                    );
+                  })}
                 </div>
-              </div>
-              <div className="grid grid-cols-1 col-span-3 m-4">
-                <p className="font-bold text-xl mb-2 text_color_light font-chaney_title divide-y divide-solid">
-                  Projets auxquels je suis rattaché
-                </p>
-                <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
-                  <DisplayAttachedProjects />
-                </div>
-                {data.userWithRelations.project_assigned.map((project) => {
-                  return (
-                    <div className="grid grid-cols-3 p-4 text-center">
-                      <p>{project.name}</p>
-                      <p>{project.description}</p>
-                      <p>{project.created_at}</p>
-                    </div>
-                  );
-                })}
               </div>
 
               <div className="col-span-3 sm:col-span-6">
