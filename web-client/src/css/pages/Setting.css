@@ -1,0 +1,53 @@
+.settings-container {
+	@apply w-full rounded-lg;
+}
+
+.infos-user-container {
+	@apply bg-altered_white-color rounded-lg;
+}
+
+.infos-title {
+	@apply p-4 text-wildmine_black font-proza_second_title text-4xl italic;
+}
+
+.infos-content {
+	@apply px-4 pb-4 my-6 text-wildmine_black text-2xl font-proza_desc ;
+}
+
+.infos-liste {
+    @apply my-6;
+}
+
+.projects-user-container {
+	@apply w-full mb-4;
+}
+
+.projects-user-title {
+	@apply p-4 text-secondary_color font-proza_second_title text-4xl italic;
+}
+
+.projects-user-content {
+	@apply grid grid-cols-1 lg:grid-cols-2 ;
+}
+
+.issues-user-container {
+	@apply mb-4;
+}
+
+.issues-user-title {
+	@apply p-4 text-secondary_color font-proza_second_title text-4xl italic;
+}
+
+.issues-user-content {
+	@apply px-4 pb-4 text-wildmine_black text-sm font-proza_desc w-11/12;
+}
+
+
+
+.organization-collaborators {
+	@apply p-4 text-wildmine_black font-proza_tags text-xs;
+}
+
+.organization-btn {
+	@apply flex p-4 items-center justify-end fill-secondary_color;
+}

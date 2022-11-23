@@ -1,0 +1,35 @@
+.navbar {
+	@apply flex justify-evenly fixed w-full p-4 h-20 z-20 top-0;
+}
+
+.navInactive {
+	@apply bg-transparent;
+}
+
+.navActive {
+	@apply bg-gradient-to-b from-wildmine_black via-wildmine_black to-transparent;
+}
+
+.logo-container {
+	@apply self-center;
+}
+
+.topbar-menu-links-container {
+	@apply w-2/3 flex justify-around rounded-b-lg px-12;
+}
+
+.topbar-menu-link {
+	@apply cursor-pointer px-8 py-1 text-center bg-wildmine_black text-secondary_color border border-secondary_color rounded-full my-auto;
+}
+
+.topbar-menu-link:hover {
+	@apply bg-secondary_color text-wildmine_black border-wildmine_black;
+}
+
+.topbar-menu-link-selected {
+	@apply bg-secondary_color text-wildmine_black;
+}
+
+.topbar-menu-settings {
+	@apply cursor-pointer ml-8 my-auto mr-8 hover:text-secondary_color;
+}

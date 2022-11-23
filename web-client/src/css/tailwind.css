@@ -1,0 +1,51 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './style.css';
+
+@import './components/Carousel.css';
+@import './components/TopBar.css';
+@import './components/Button.css';
+@import './components/Input.css';
+@import './components/Modal.css';
+@import './components/Select.css';
+
+@import './pages/Projects.css';
+@import './pages/Organization.css';
+
+@import './pages/DetailsProject.css';
+@import './pages/IssuesProject.css';
+@import './pages/Setting.css';
+
+@import './pages/Dashboard.css';
+
+@font-face {
+	font-family: 'Chaney Title';
+	src: url('../assets/fonts/chaney-regular-webfont.ttf');
+}
+
+@font-face {
+	font-family: 'Proza Main Title';
+	src: url('../assets/fonts/ProzaLibre-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: 'Proza Second Title';
+	src: url('../assets/fonts/ProzaLibre-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'Proza Tags';
+	src: url('../assets/fonts/ProzaLibre-BoldItalic.ttf');
+}
+
+@font-face {
+	font-family: 'Proza Body';
+	src: url('../assets/fonts/ProzaLibre-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Proza Descriptions';
+	src: url('../assets/fonts/ProzaLibre-Italic.ttf');
+}

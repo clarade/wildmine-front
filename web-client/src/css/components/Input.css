@@ -1,0 +1,28 @@
+.login-input-container {
+	@apply w-full mb-6;
+}
+
+.login-input {
+	@apply w-full bg-gray-200 text-secondary_color border rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white;
+}
+
+.login-label {
+	@apply uppercase tracking-wide text-secondary_color text-xs font-bold mb-2;
+}
+
+.input-container {
+	@apply w-full mb-6;
+}
+
+.label {
+  @apply tracking-wide text-black font-bold;
+}
+
+.input,
+.input-area {
+  @apply w-full bg-gray-200 text-secondary_color border border-secondary_color rounded-lg py-3 px-4 focus:outline-none focus:bg-white mt-2 placeholder-secondary_color;
+}
+
+.input-area {
+	@apply h-40;
+}

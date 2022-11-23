@@ -1,0 +1,20 @@
+.button-general,
+.submit-button {
+  @apply px-4 md:px-4 py-1 border border-secondary_color text-center rounded-full lg:h-[34px];
+}
+
+.button-general {
+  @apply cursor-pointer bg-wildmine_black text-secondary_color;
+}
+
+.button-general:hover {
+  @apply bg-secondary_color text-wildmine_black border-wildmine_black;
+}
+
+.login-button {
+  @apply bg-secondary_color hover:bg-secondary_color_hover text-white font-bold py-2 px-4 rounded;
+}
+
+.submit-button {
+  @apply bg-secondary_color hover:bg-secondary_color_hover hover:border-secondary_color_hover text-wildmine_black;
+}

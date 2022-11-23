@@ -1,0 +1,29 @@
+.organization-projects-container {
+	@apply w-full mb-4 bg-altered_white-color h-4/6 rounded-lg;
+}
+
+.organization-container {
+	@apply mt-6 p-4;
+}
+
+.organization-title {
+	@apply p-4 text-wildmine_black font-proza_second_title text-2xl;
+}
+
+.organization-desc {
+	@apply px-4 pb-4 text-wildmine_black text-sm font-proza_desc w-11/12 overflow-ellipsis;
+}
+
+.organization-collaborators {
+	@apply p-4 text-wildmine_black font-proza_tags text-xs;
+}
+
+.organization-btn {
+	@apply flex p-4 items-center justify-end fill-secondary_color;
+}
+
+/* w-1/4  relative cursor-pointer overflow-hidden rounded-3xl */
+
+/* .organization-project-container img {
+	@apply w-full h-full object-cover;
+} */

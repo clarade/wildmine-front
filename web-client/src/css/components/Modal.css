@@ -1,0 +1,15 @@
+.modal-background {
+  @apply w-screen h-screen absolute top-0 left-0 z-40 bg-wildmine_black bg-opacity-50;
+}
+
+.modal-container {
+  @apply bg-grey_light  text-black rounded-2xl mx-auto mt-[10%] w-[80%] lg:w-1/2 left-1/4 pt-4;
+}
+
+.modal-title {
+  @apply font-bold text-black text-2xl text-center mb-8;
+}
+
+.modal-close {
+  @apply cursor-pointer fixed right-[15%] top-[10%] md:right-[17%] md:top-[15%] lg:right-[27%] lg:top-[22%];
+}
