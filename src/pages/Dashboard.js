@@ -52,13 +52,13 @@ const Dashboard = ({ actualUser }) => {
                   </div>
                   {data.userWithRelations.project_assigned.map((project) => {
                     return (
-                      <>
                       <div className="grid grid-cols-3 p-4 text-xs sm:text-sm md:text-base bg-grey_light text-wildmine_black shadow-md text-center border relative -z-10 border-b-black h-16">
-                        <p>{project.name}</p>
-                        <p>{project.description}</p>
-                        <p>{new Date(project.created_at).toLocaleDateString()}</p>
+                        <div>
+                          <p>{project.name}</p>
+                          <p>{project.description}</p>
+                          <p>{new Date(project.created_at).toLocaleDateString()}</p>
+                        </div>
                       </div>
-                      </>
                     );
                   })}
                 </div>
