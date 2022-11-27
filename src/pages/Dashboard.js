@@ -44,7 +44,7 @@ const Dashboard = ({ actualUser }) => {
                   <Diagram />
                 </div>
                 <div className="grid grid-cols-1 col-span-3 m-4">
-                  <p className="font-bold text-xl mb-2 text_color_light font-chaney_title divide-y divide-solid">
+                  <p className="font-bold text-xl mb-2 text_color_light font-chaney_title">
                     Projets auxquels je suis rattaché
                   </p>
                   {/* <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
