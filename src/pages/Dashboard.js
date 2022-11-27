@@ -65,7 +65,7 @@ const Dashboard = ({ actualUser }) => {
               </div>
 
               <div className="col-span-3 sm:col-span-6">
-                <p className="font-bold text-xl text_color_light mt-8 mb-12 font-chaney_title">
+                <p className="font-bold text-xl text_color_light mt-8 mb-12 mr-4 ml-4 font-chaney_title">
                   Derniers tickets traités
                 </p>
                 <div className="my-4">

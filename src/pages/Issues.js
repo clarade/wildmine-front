@@ -36,7 +36,7 @@ const Issues = () => {
   
   return (
     <>
-  <div className='px-4 md:flex justify-around mb-8'>
+  <div className='grid grid-cols-1'>
 
       <SearchButton
         value={valuesToCompare}
