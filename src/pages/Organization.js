@@ -41,11 +41,12 @@ const Organization = () => {
 	return (
 		<div className="organization-container">
 			<h2 className="font-chaney_title py-6 text-2xl">Organisations</h2>
-			<div className="flex justify-around sm:flex-1 my-8">
+			<div className="px-4 md:flex justify-around mb-8">
     
 			<SearchButton
         value={valuesToCompare}
         onChange={filter}
+		className="mb-4"
       />
 
 

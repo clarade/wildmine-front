@@ -62,7 +62,7 @@ const Dashboard = ({ actualUser }) => {
                 </div>
               </div>
 
-              <div className="col-span-3 sm:col-span-6">
+              <div className="col-span-3 sm:col-span-6 m-4">
                 <p className="font-bold text-xl text_color_light mt-8 mb-12 font-chaney_title">
                   Derniers tickets traités
                 </p>
@@ -81,7 +81,7 @@ const Dashboard = ({ actualUser }) => {
                         )
                       )
                     ) : (
-                      <p>Aucun ticket ne vous est assigné pour le moment</p>
+                      <p className="m-4">Aucun ticket ne vous est assigné pour le moment</p>
                     )}
                   </div>
                 </div>

@@ -7,7 +7,7 @@
 }
 
 .organization-project-container img {
-	@apply h-full w-full mx-auto object-cover border;
+	@apply h-full w-full mx-auto object-cover;
 }
 
 .hover-container {
