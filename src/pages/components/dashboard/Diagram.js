@@ -17,7 +17,7 @@ const Diagram = () => {
       .length,
     done: status.filter((status) => status.status === "DONE").length,
   };
-  console.log(status);
+
   const datas = {
     labels: ["Gray", "Yellow", "Yellow"],
     datasets: [
@@ -35,8 +35,7 @@ const Diagram = () => {
 
   return (
     <>
-      {/* <canvas className="diagram-size"> */}
-      {/* <pre>{JSON.stringify(status, null, 2)}</pre> */}
+      
       <Doughnut data={datas} />
       <div className="p-4">
         {/* <img className="w-full" src={diagram} alt="diagram" /> */}
