@@ -48,11 +48,11 @@ const Dashboard = ({ actualUser }) => {
                     Projets auxquels je suis rattaché
                   </p>
                   {data.userWithRelations.project_assigned.map((project) => {
-                    return (
-                      <>
                   <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
                     <DisplayAttachedProjects />
                   </div>
+                    return (
+                      <>
                       <div className="grid grid-cols-3 p-4 text-center">
                         <p>{project.name}</p>
                         <p>{project.description}</p>

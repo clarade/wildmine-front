@@ -2,7 +2,7 @@ import React from 'react';
 
 const DisplayIssuesTitle = () => (
   <div
-    className='grid grid-cols-7 text-xs sm:text-sm md:text-base p-4 bg-grey_light text-wildmine_black shadow-md rounded-t-lg font-bold mt-12 text-center'
+    className='grid grid-cols-7 text-xs sm:text-xs md:text-base p-4 bg-grey_light text-wildmine_black shadow-md rounded-t-lg font-bold mt-12 text-center'
   >
     <p>No du ticket</p>
     <p>Priorité</p>
