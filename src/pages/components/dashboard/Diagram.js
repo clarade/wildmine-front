@@ -23,8 +23,8 @@ const Diagram = () => {
     datasets: [
       {
         data: [chartData.inWait, chartData.inProgress, chartData.done],
-        backgroundColor: ["#808080", "#FFFF00", "#008000"],
-        hoverBackgroundColor: ["#00A550", "#F0F0F0", "#EACC41"],
+        backgroundColor: ["#808080", "#937312", "#2D5838"],
+        hoverBackgroundColor: ["#C9C4C4", "#E8BB31", "#56A56A"],
       },
     ],
     options: {
