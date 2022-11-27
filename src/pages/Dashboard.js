@@ -47,22 +47,24 @@ const Dashboard = ({ actualUser }) => {
                   <p className="font-bold text-xl mb-2 text_color_light font-chaney_title divide-y divide-solid">
                     Projets auxquels je suis rattaché
                   </p>
+                  {data.userWithRelations.project_assigned.map((project) => {
+                    return (
+                      <>
                   <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
                     <DisplayAttachedProjects />
                   </div>
-                  {data.userWithRelations.project_assigned.map((project) => {
-                    return (
                       <div className="grid grid-cols-3 p-4 text-center">
                         <p>{project.name}</p>
                         <p>{project.description}</p>
-                        <p>{project.created_at}</p>
+                        <p>{new Date(project.created_at).toLocaleDateString()}</p>
                       </div>
+                      </>
                     );
                   })}
                 </div>
               </div>
 
-              <div className="col-span-3 sm:col-span-6 m-4">
+              <div className="col-span-3 sm:col-span-6">
                 <p className="font-bold text-xl text_color_light mt-8 mb-12 font-chaney_title">
                   Derniers tickets traités
                 </p>
