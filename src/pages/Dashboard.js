@@ -44,7 +44,7 @@ const Dashboard = ({ actualUser }) => {
                   <Diagram />
                 </div>
                 <div className="grid grid-cols-1 col-span-3 m-4">
-                  <p className="font-bold text-xl mb-2 text_color_light font-chaney_title divide-y divide-solid">
+                  <p className="font-bold text-xl mb-2 text_color_light font-chaney_title">
                     Projets auxquels je suis rattaché
                   </p>
                   {/* <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
@@ -58,12 +58,10 @@ const Dashboard = ({ actualUser }) => {
                   {data.userWithRelations.project_assigned.map((project) => {
                     return (
                       <div className="grid grid-cols-3 p-4 text-xs sm:text-sm md:text-base bg-grey_light text-wildmine_black shadow-md text-center border relative -z-10 border-b-black h-16">
-                        <div>
                           <p>{project.name}</p>
                           <p>{project.description}</p>
                           <p>{new Date(project.created_at).toLocaleDateString()}</p>
                         </div>
-                      </div>
                     );
                   })}
                 </div>
