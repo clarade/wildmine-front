@@ -40,7 +40,7 @@ const DisplayProject = ({
           src={
             project.images.length > 0
               ? `${process.env.REACT_APP_SERVER_URL}/images/${
-                  project.images[project.images.length() - 1].name
+                  project.images[project.images.length - 1].name
                 }`
               : smiley
           }
