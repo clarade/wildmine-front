@@ -36,7 +36,7 @@ const DisplayProject = ({
           </div>
         )}
 
-        <img
+<img
           src={
             project.images.length > 0
               ? `${process.env.REACT_APP_SERVER_URL}/images/${
