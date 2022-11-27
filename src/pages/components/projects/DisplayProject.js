@@ -47,6 +47,9 @@ const DisplayProject = ({
           alt="Sélection du projet"
           className="rounded"
         />
+        console.log(`${process.env.REACT_APP_SERVER_URL}/images/${
+                  project.images[project.images.length - 1].name
+                }`)
       </NavLink>
     </div>
   );
