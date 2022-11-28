@@ -51,6 +51,7 @@ const Settings = () => {
 
   return (
     <div className="settings-container">
+      <div>
         <div className="infos-user-container grid grid-cols-1 col-span-3 m-4">
           <h3 className="infos-title">Mes Informations</h3>
           <ul className="infos-content">
@@ -74,6 +75,7 @@ const Settings = () => {
               <button className="submit-button mb-8 mt-4">Me déconnecter</button>
             </div>
           </form>
+        </div>
         <div className="projects-user-container grid grid-cols-1 col-span-3 m-4">
             <h3 className="font-bold text-xl mb-2 text_color_light font-chaney_title divide-y divide-solid">Mes Projets</h3>     
           <div className="projects-user-content">
