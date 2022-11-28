@@ -44,8 +44,12 @@ const Settings = () => {
 
   const actualUser = data.userWithRelations;
 
-  console.log(data.userWithRelations);
-  console.log(projects);
+  if (actualUser.project_assigned === null) {
+    return <div>Loading ...</div>;
+  }
+
+  console.log(actualUser.project_assigned);
+
   return (
     <div className="settings-container">
       <div>
@@ -98,8 +102,8 @@ const Settings = () => {
             Mes Projets
           </h3>
           <div className="projects-user-content">
-            {projects && projects.projects.length > 0 ? (
-              projects.projects.map((projectObject, index) => {
+            {actualUser && actualUser.project_assigned.length > 0 ? (
+              actualUser.project_assigned.map((projectObject, index) => {
                 return (
                   <DisplayProject
                     key={index}
@@ -107,7 +111,7 @@ const Settings = () => {
                     index={index}
                     projectObject={projectObject}
                     displayHover={displayHover}
-                    project={actualUser.project_assigned[index]}
+                    project={projectObject}
                     to="/issue"
                     //isMobile={isMobile}
                   />

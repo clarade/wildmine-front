@@ -41,9 +41,7 @@ const Projects = ({ isMobile }) => {
   ) {
     setFoundProject(data.projects);
   }
-
-  console.log("FOUND", foundProject);
-
+  console.log(foundProject);
   return (
     <div>
       <div className="px-4 md:flex justify-around mb-8">
