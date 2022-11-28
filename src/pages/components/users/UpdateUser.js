@@ -36,57 +36,109 @@ const UpdateUser = ({ setDisplayUpdateUser, user}) => {
 	};
 
 	return (
-		<div className="bg-wildmine_black border-4 border-secondary_color text-text_color rounded-2xl fixed z-30 w-1/2 left-1/4 -mt-60">
-			<img
-				className="cursor-pointer absolute right-8 top-6"
-				src={Close}
-				alt="Fermer la fenêtre"
-				onClick={() => setDisplayUpdateUser(false)}
-			/>
+		// <div className="bg-wildmine_black border-4 border-secondary_color text-text_color rounded-2xl fixed z-30 w-1/2 left-1/4 -mt-60">
+		// 	<img
+		// 		className="cursor-pointer absolute right-8 top-6"
+		// 		src={Close}
+		// 		alt="Fermer la fenêtre"
+		// 		onClick={() => setDisplayUpdateUser(false)}
+		// 	/>
 
-			<form onSubmit={onSubmit} className="w-2/3 mx-auto">
+		// 	<form onSubmit={onSubmit} className="w-2/3 mx-auto">
 
-                <Input
-					label="Nom"
-					placeHolder="Entrez votre nom"
-					labelClassName="text-sm"
-					setValue={setLastName}
-					value={lastName}
-					required
+        //         <Input
+		// 			label="Nom"
+		// 			placeHolder="Entrez votre nom"
+		// 			labelClassName="text-sm"
+		// 			setValue={setLastName}
+		// 			value={lastName}
+		// 			required
+		// 		/>
+
+        //         <Input
+		// 			label="Prénom"
+		// 			placeHolder="Entrez votre prénom"
+		// 			labelClassName="text-sm"
+		// 			setValue={setFirstName}
+		// 			value={firstName}
+		// 			required
+		// 		/>
+
+        //         <Input
+		// 			label="Email"
+		// 			placeHolder="Entrez votre email"
+		// 			labelClassName="text-sm"
+		// 			setValue={setEmail}
+		// 			value={email}
+		// 			required
+		// 		/>
+
+        //         <Input
+		// 			label="role"
+		// 			placeHolder="Entrez votre role"
+		// 			labelClassName="text-sm"
+		// 			setValue={setRoles}
+		// 			value={roles}
+		// 			required
+		// 		/>
+
+		// 		<div className="text-center">
+		// 			<button className="submit-button mb-8 mt-4">Mettre à jour</button>
+		// 		</div>
+		// 	</form>
+		// </div>
+		<div className='modal-background'>
+    <div className='modal-container'>
+
+      <p className='modal-title'>
+        Changer mes informations
+      </p>
+
+      <img
+        className='modal-close'
+        src={Close}
+        alt='Fermer la fenêtre'
+        onClick={() => setDisplayCreation(false)}
+      />
+      
+      <form onSubmit={onSubmit} className='w-2/3 mx-auto'>
+
+        <Input
+          label='Nom'
+          placeHolder='Entrez votre nom'
+          labelClassName='text-sm'
+          setValue={setLastName}
+          value={lastName}
+          required
+        />
+
+		<Input
+		   label="Email"
+		   placeHolder="Entrez votre email"
+		   labelClassName="text-sm"
+		   setValue={setEmail}
+		   value={email}
+		   required
+		/>
+
+        <Input
+			label="role"
+			placeHolder="Entrez votre role"
+			labelClassName="text-sm"
+			setValue={setRoles}
+			value={roles}
+			required
 				/>
 
-                <Input
-					label="Prénom"
-					placeHolder="Entrez votre prénom"
-					labelClassName="text-sm"
-					setValue={setFirstName}
-					value={firstName}
-					required
-				/>
-
-                <Input
-					label="Email"
-					placeHolder="Entrez votre email"
-					labelClassName="text-sm"
-					setValue={setEmail}
-					value={email}
-					required
-				/>
-
-                <Input
-					label="role"
-					placeHolder="Entrez votre role"
-					labelClassName="text-sm"
-					setValue={setRoles}
-					value={roles}
-					required
-				/>
-
-				<div className="text-center">
-					<button className="submit-button mb-8 mt-4">Mettre à jour</button>
-				</div>
-			</form>
-		</div>
+        <div className='text-center'>
+          <button
+            className='submit-button mb-8 mt-4'>
+            Mettre à jour
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 	);
 };
 
