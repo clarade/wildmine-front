@@ -98,7 +98,7 @@ const UpdateUser = ({ setDisplayUpdateUser, user}) => {
         className='modal-close'
         src={Close}
         alt='Fermer la fenêtre'
-        onClick={() => setDisplayCreation(false)}
+        onClick={() => setDisplayUpdateUser(false)}
       />
       
       <form onSubmit={onSubmit} className='w-2/3 mx-auto'>
