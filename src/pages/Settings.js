@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
-import { Redirect } from "react-router-dom";
 import Issues from "./Issues";
 import DisplayProject from "./components/projects/DisplayProject";
 import { userWithRelations, deleteSession } from "../graphql/UserSession";
@@ -10,29 +9,33 @@ import { getProjects } from "../graphql/Project.js";
 
 const Settings = () => {
   const [displayHover, setDisplayHover] = useState(false);
-
   const { loading, error, data } = useQuery(userWithRelations);
   const { data: projects } = useQuery(getProjects);
 
   const [displayUpdateUser, setDisplayUpdateUser] = useState(false);
 
   const [deconnexion] = useMutation(deleteSession, {
-    onCompleted: () => <Redirect to="/" />,
+    onCompleted: async () => {
+      setTimeout(() => {
+        window.location.replace("/");
+      }, 200);
+    },
+
     onError: (error) => console.log(error.message),
   });
 
   const onSubmit = (event) => {
     event.preventDefault();
 
+    deconnexion();
+  };
+
+  const handleLogout = () => {
     deconnexion({
       variables: {
         user: parseInt(actualUser.id),
       },
     });
-
-    window.setTimeout(function () {
-      window.location.href = "/";
-    }, 500);
   };
 
   if (loading) return "Loading...";
@@ -81,7 +84,10 @@ const Settings = () => {
                   user={actualUser}
                 />
               )}
-              <button className="submit-button mb-8 mt-4">
+              <button
+                onClick={handleLogout}
+                className="submit-button mb-8 mt-4"
+              >
                 Me déconnecter
               </button>
             </div>

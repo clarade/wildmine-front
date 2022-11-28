@@ -39,29 +39,33 @@ const Dashboard = ({ actualUser }) => {
         <>
           <div className="">
             <div className="">
-              <div className="flex flex-col md:flex-row justify-between">
+              <div className="flex flex-col lg:flex-row justify-between">
                 <div className="grid rounded p-4 bg-secondary_color grid-cols-1 col-span-3 m-4">
                   <Diagram />
                 </div>
-                <div className="grid grid-cols-1 col-span-3 m-4">
+                <div className="flex text-left  divide-y divide-black border-black flex-col w-full lg:w-1/2 p-4">
                   <p className="font-bold text-xl mb-2 text_color_light font-chaney_title">
                     Projets auxquels je suis rattaché
                   </p>
                   {/* <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
                     <DisplayAttachedProjects />
                   </div> */}
-                  <div className="grid grid-cols-3 p-4 bg-grey_light text-wildmine_black shadow-md rounded-t-lg font-bold mt-12 text-center">
-	              	<p>Projet</p>
-	              	<p>Description</p>
-	              	<p>Date</p>
-	              </div>
+                  <div className="flex px-10 text-xs sm:text-base  justify-around p-4  bg-grey_light text-wildmine_black shadow-md rounded-t-lg font-bold  text-center">
+                    <p className="w-full text-left">Projet</p>
+                    <p className="w-full text-left">Description</p>
+                    <p className="w-full text-left">Date</p>
+                  </div>
                   {data.userWithRelations.project_assigned.map((project) => {
                     return (
-                      <div className="grid grid-cols-3 p-4 text-xs sm:text-sm md:text-base bg-grey_light text-wildmine_black shadow-md text-center border relative -z-10 border-b-black h-16">
-                          <p>{project.name}</p>
-                          <p>{project.description}</p>
-                          <p>{new Date(project.created_at).toLocaleDateString()}</p>
-                        </div>
+                      <div className="flex px-10 justify-around p-4 text-xs sm:text-sm md:text-base bg-grey_light text-wildmine_black shadow-md text-center border relative  border-b-black ">
+                        <p className="w-full text-left">{project.name}</p>
+                        <p className="w-full text-left">
+                          {project.description}
+                        </p>
+                        <p className="w-full text-left">
+                          {new Date(project.created_at).toLocaleDateString()}
+                        </p>
+                      </div>
                     );
                   })}
                 </div>
@@ -86,7 +90,9 @@ const Dashboard = ({ actualUser }) => {
                         )
                       )
                     ) : (
-                      <p className="m-4">Aucun ticket ne vous est assigné pour le moment</p>
+                      <p className="m-4">
+                        Aucun ticket ne vous est assigné pour le moment
+                      </p>
                     )}
                   </div>
                 </div>
