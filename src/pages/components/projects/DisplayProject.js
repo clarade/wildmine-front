@@ -10,6 +10,7 @@ const DisplayProject = ({
   isMobile,
 }) => {
   console.log(project);
+
   return (
     <div
       onMouseEnter={() => setDisplayHover(index + 1)}
@@ -36,9 +37,9 @@ const DisplayProject = ({
           </div>
         )}
 
-{/* <img
+        <img
           src={
-            project.images.length > 0
+            project.images && project.images.length > 0
               ? `${process.env.REACT_APP_SERVER_URL}/images/${
                   project.images[project.images.length - 1].name
                 }`
@@ -46,7 +47,7 @@ const DisplayProject = ({
           }
           alt="Sélection du projet"
           className="rounded"
-        /> */}
+        />
       </NavLink>
     </div>
   );
