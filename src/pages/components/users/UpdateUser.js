@@ -87,7 +87,7 @@ const UpdateUser = ({ setDisplayUpdateUser, user}) => {
 		// 		</div>
 		// 	</form>
 		// </div>
-		<div className='modal-background'>
+<div className='modal-background'>
     <div className='modal-container'>
 
       <p className='modal-title'>
@@ -109,6 +109,15 @@ const UpdateUser = ({ setDisplayUpdateUser, user}) => {
           labelClassName='text-sm'
           setValue={setLastName}
           value={lastName}
+          required
+        />
+
+<Input
+          label='Prénom'
+          placeHolder='Entrez votre prénom'
+          labelClassName='text-sm'
+          setValue={setFirstName}
+          value={firstName}
           required
         />
 
